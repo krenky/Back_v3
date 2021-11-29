@@ -40,6 +40,9 @@ namespace Back_v._2
             services.AddDbContext<ApplicationDbContext>(options => 
             options.UseNpgsql(connection));
 
+            services.AddDbContext<ShopdbContext>(options =>
+            options.UseNpgsql(connection));
+
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
